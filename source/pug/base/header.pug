@@ -1,0 +1,128 @@
+mixin header(headerMods, currentPage)
+  -
+    var headerLinks = [
+      {
+        href: "#",
+        text: "Services",
+        icon: {
+          name: "arrow-dropdown",
+          width: 8,
+          height: 5
+        },
+        submenu: [
+          {
+            href: "#funding",
+            text: "Outcome-based funding",
+            anchor: true
+          },
+          {
+            href: "#services",
+            text: "Advisory services ",
+            anchor: true
+          },
+          {
+            href: "#news",
+            text: "Outcome measurement application",
+            anchor: true
+          }
+        ]
+      },
+      {
+        href: "#",
+        text: "About Us"
+      },
+      {
+        href: "#",
+        text: "Blog",
+        icon: {
+          name: "arrow-dropdown",
+          width: 8,
+          height: 5
+        },
+        submenu: [
+          {
+            href: "#article",
+            text: "Article",
+            anchor: true,
+          },
+          {
+            href: "#article",
+            text: "Article",
+            anchor: true,
+          }
+        ]
+      },
+      {
+        anchor: true,
+        href: "#contact",
+        text: "Contact Us"
+      },
+      {
+        href: "#",
+        text: "Podcast"
+      },
+    ]
+
+  header.header(class=headerMods)
+    .header__wrapper
+      .container
+        a.header__logo
+          +picture("content", "logo", "png", 143, 30, "logo")
+        button.header__toggle.btn-reset(type="button", aria-label="Mobile menu", aria-pressed="false")
+          span
+        nav.main-nav
+          .main-nav__wrapper
+            ul.main-nav__list
+              each link, index in headerLinks
+                if link.submenu
+                  li.main-nav__item.submenu(data-submenu)
+                    if (index === currentPage)
+                      a(data-toggle).main-nav__link.main-nav__link--active.submenu__toggle=link.text
+                        .submenu__link-icon
+                          +icon(link.icon.name, link.icon.width, link.icon.height)
+                      ul.submenu__list
+                        each item in link.submenu
+                          li.submenu__item
+                            if item.anchor
+                              a(href= item.href data-scroll).submenu__link= item.text
+                            else
+                              a(href= item.href).submenu__link= item.text
+                    else
+                      a(href=link.href data-toggle).main-nav__link.submenu__toggle=link.text
+                        .submenu__link-icon
+                          +icon(link.icon.name, link.icon.width, link.icon.height)
+                      ul.submenu__list
+                        each item in link.submenu
+                          li.submenu__item
+                            if item.anchor
+                              a(href= item.href data-scroll).submenu__link= item.text
+                            else
+                              a(href= item.href).submenu__link= item.text
+                else
+                  li.main-nav__item
+                    if (index === currentPage)
+                      if link.anchor
+                        a(data-scroll).main-nav__link.main-nav__link--active=link.text
+                      else
+                        a.main-nav__link.main-nav__link--active=link.text
+                    else
+                      if link.anchor
+                        a(href=link.href data-scroll).main-nav__link=link.text
+                      else
+                        a.main-nav__link(href=link.href)=link.text
+            .user-block
+              .lang.submenu(data-submenu)
+                a(href="#" data-toggle) English
+                  .lang__icon
+                    +icon("arrow-dropdown", 8, 5)
+                ul.lang__list.submenu__list
+                  li.lang__item.submenu__item
+                    a.lang__link.lang__link--en.submenu__link English
+                  li.lang__item.submenu__item
+                    a.lang__link.lang__link--fr.submenu__link France
+              form.form-search(action="#", method="post")
+                .form-search__input-box
+                  label
+                    input(type="search", name="search", id="search-header")
+                    span.form-search__icon
+                      +icon("icon-search", 16, 15)

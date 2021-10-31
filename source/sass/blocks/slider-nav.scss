@@ -1,0 +1,48 @@
+.slider-nav {
+  &__btn {
+    &.swiper-button-prev {
+      top: 35%;
+      left: -54px;
+
+      @include media-breakpoint-down(xl) {
+        left: 10px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        top: 30%;
+      }
+
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        margin-right: 3px;
+        transform: rotate(90deg);
+      }
+    }
+
+    &.swiper-button-next {
+      top: 35%;
+      right: -54px;
+
+      @include media-breakpoint-down(xl) {
+        right: 10px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        top: 30%;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        margin-left: 3px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

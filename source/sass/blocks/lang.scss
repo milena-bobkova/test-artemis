@@ -1,0 +1,74 @@
+.lang {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: 15px;
+  background-color: $color-default-white;
+  line-height: 19px;
+
+  a {
+    position: relative;
+    font-size: 14px;
+    line-height: 19px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+    color: $color-catalina-blue;
+    display: flex;
+
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
+      &:hover,
+      &:focus {
+        color: $color-catalina-blue;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__icon {
+    margin: 0 0 0 8px;
+
+    svg {
+      fill: transparent;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+
+    min-width: 80px;
+    padding: 12px;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    color: $color-catalina-blue;
+    cursor: pointer;
+    transition: $trans--300;
+
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
+      &:hover,
+      &:focus {
+        color: $color-catalina-blue;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &.submenu {
+    .submenu__list {
+      @include media-breakpoint-down(lg) {
+        top: calc(100% + 6px);
+        left: 0;
+      }
+    }
+  }
+}

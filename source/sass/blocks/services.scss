@@ -1,0 +1,61 @@
+.services {
+  padding: 135px 0;
+  background-color: $color-default-white;
+  min-height: 448px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 35px 0;
+  }
+
+  .h2 {
+    text-align: left;
+  }
+
+  &__text-content {
+    position: relative;
+    margin-left: auto;
+    margin-right: 30px;
+    width: 39.29%;
+    max-width: 473px;
+
+    &::after {
+      position: absolute;
+      bottom: 10px;
+      right: 40px;
+      content: "";
+      width: 58px;
+      height: 58px;
+      background: url("../img/sprite/dots.svg");
+      background-size: 100%;
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    p {
+      margin-bottom: 56px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__img {
+    top: -20px;
+    left: 100px;
+    width: 52.23%;
+    max-width: 700px;
+
+    @include media-breakpoint-down(xxl) {
+      left: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin: 0 0 50px 0;
+      width: 100%;
+    }
+  }
+ }

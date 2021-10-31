@@ -1,0 +1,8 @@
+mixin media-card(data)
+  .media-card(class!=attributes.class)
+    .media-card__video
+      //<iframe data-lazy-onload="#" width="" height="" title="vimeo-player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      +picture(data.img.path, data.img.name, data.img.format, data.img.width, data.img.height, data.img.alt)
+      a.media-card__play-btn.play-btn(aria-label="look video" href="#")
+        +icon("play-button", 60, 60)
+    a.media-card__title(href="#")!=data.title

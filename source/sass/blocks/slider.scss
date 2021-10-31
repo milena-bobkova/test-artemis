@@ -1,0 +1,24 @@
+.slider {
+  padding-left: 25px;
+  padding-right: 25px;
+  position: relative;
+  max-width: 1033px;
+  margin: 0 auto;
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__slides {
+    @include list-reset;
+
+    max-width: 1008px;
+
+  }
+
+  .slider-nav {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}

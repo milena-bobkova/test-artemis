@@ -1,0 +1,30 @@
+mixin footer(footerMods)
+  footer.footer(class=footerMods)
+    .footer__top
+      .container
+        .footer__logo
+          +picture("content", "logo", "png", 143, 30, "logo")
+        ul.footer__site-map
+          each block in siteMapData
+            li.footer__site-map-block(class=block.mods)
+              h2= block.title
+              ul.footer__links
+                each link in block.links
+                  li.footer__links-item
+                    if link.isOutside
+                      a.footer__link(class=link.mods href=link.href target="_blank" rel="nofollow noopener")
+                        if link.icon
+                          .footer__link-icon
+                            +icon(link.icon.name, link.icon.width, link.icon.height)
+                        span!= link.text
+                    else
+                      a.footer__link(class=link.mods href=link.href)
+                        if link.icon
+                          .footer__link-icon
+                            +icon(link.icon.name, link.icon.width, link.icon.height)
+                        span!= link.text
+    .footer__bottom
+      .container
+        p All rights reserved (c) Artemis 2020
+
+

@@ -1,0 +1,22 @@
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  transition: color $trans--300;
+
+  color: rgba($color-default-white, 0.8);
+}
+
+a.play-btn {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: rgba($color-default-white, 1);
+    }
+  }
+}

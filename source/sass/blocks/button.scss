@@ -1,0 +1,85 @@
+.button {
+  padding: 18px;
+  border: none;
+  outline: none;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: $color-night-rider;
+  background-color: transparent;
+  border-radius: 31px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity $trans--300;
+
+  &--primary {
+    width: 215px;
+    background-color: $color-sunglow;
+
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
+      &:hover,
+      &:focus {
+        color: $color-night-rider;
+      }
+    }
+
+    @include media-breakpoint-down(xl) {
+      width: 185px;
+    }
+  }
+
+  &--secondary {
+    width: 215px;
+    border: 1px solid $color-catalina-blue;
+    color: $color-catalina-blue;
+    background-color: $color-default-white;
+
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
+      &:hover,
+      &:focus {
+        color: $color-catalina-blue;
+      }
+    }
+
+    @include media-breakpoint-down(xl) {
+      width: 185px;
+    }
+  }
+
+  @media (hover: hover),
+  screen and (min-width: 0\0) {
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+
+  &--round {
+    width: 49px;
+    height: 49px;
+
+    color: $color-default-white;
+    background-color: $color-sunglow;
+    border-radius: 50%;
+
+    transition: opacity $trans--300, color $trans--300, border-color $trans--300;
+
+    svg {
+      fill: transparent;
+      flex-shrink: 0;
+
+      width: 176px;
+      height: 9px;
+    }
+  }
+}

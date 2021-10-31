@@ -1,0 +1,39 @@
+// Colors
+//---------------------------------
+// https://www.htmlcsscolor.com/hex/334482
+
+// Default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+$color-transparent:               rgba(255, 255, 255, 0);
+
+// Base
+
+$color-matterhorn:                #565656;
+$color-catalina-blue:             #2d415e;
+$color-night-rider:               #2c2c2c;
+$color-white:                     #fdfdfd;
+$color-sunglow:                   #ffcc2a;
+$color-tangerine-yellow:          #ffcd00;
+$color-floral-white:              #fffaec;
+$color-white-smoke:               #f8f8f8;
+$color-light-gray:                #d0d0d0;
+
+// Gradient
+
+$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+//---------------------------------
+
+$font-family--open-sans:          "OpenSans", "Arial", sans-serif;
+$font-family--georgia:            "Georgia", serif;
+
+// Animation
+//---------------------------------
+
+$trans--300:                        0.3s ease;
+$trans--600:                        0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+

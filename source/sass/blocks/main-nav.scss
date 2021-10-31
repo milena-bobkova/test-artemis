@@ -1,0 +1,103 @@
+.main-nav {
+  width: 67%;
+  max-width: 875px;
+
+  @include media-breakpoint-down(xl) {
+    width: 72%;
+  }
+
+
+  &__toggle {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+
+    margin: -15px 0 0 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    animation-name: disableBreakpointAnimationDesctop;
+    animation-duration: 1s;
+
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+      top: 95px;
+      left: 0;
+      z-index: 1;
+      flex-direction: column;
+      padding: 40px;
+
+      max-width: none;
+
+      background-color: $color-default-white;
+      width: 100vw;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.0826);
+
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+
+      transition: visibility $trans--300,
+      opacity $trans--300;
+
+      animation-name: disableBreakpointAnimationTablet;
+      animation-duration: 1s;
+    }
+
+    @include media-breakpoint-down(md) {
+      top: 81px;
+    }
+  }
+
+  &__item {
+    margin: 15px 34px 0 0;
+
+    display: flex;
+    align-items: center;
+
+    &:last-of-type {
+      margin: 15px 0 0 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin: 20px 0 0 0;
+
+    }
+  }
+
+  &__link {
+    color: $color-catalina-blue;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+
+    transition: opacity $trans--300;
+
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
+      &:hover,
+      &:focus {
+        color: $color-catalina-blue;
+        opacity: 0.7;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+.footer {
+  padding-top: 60px;
+
+  background-color: $color-white-smoke;
+
+  &__top {
+    .container {
+      display: flex;
+      justify-content: center;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
+
+    }
+  }
+
+  &__logo {
+    margin-right: 110px;
+    width: 115px;
+    height: 24px;
+
+    @include media-breakpoint-down(xxl) {
+      margin-right: 70px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin: 0 0 30px 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__site-map {
+    @include list-reset;
+
+    margin-right: 60px;
+
+    width: 70.5%;
+    max-width: 860px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(xxl) {
+      margin-right: 0;
+    }
+
+    h2 {
+      margin: 0 0 15px 0;
+      color: $color-night-rider;
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+  }
+
+  &__site-map-block {
+    margin-right: 76px;
+    margin-bottom: 29px;
+    min-width: 100px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-down(xxl) {
+      margin-right: 60px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-right: 40px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-right: 20px;
+      width: 45%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &--socials {
+      h2 {
+        margin: 0 0 20px 0;
+      }
+      .footer__links {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .footer__links-item {
+        margin: 0 9px 9px 0;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__links {
+    @include list-reset;
+  }
+
+  &__links-item {
+    margin: 0 0 12px 0;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__link-icon {
+    margin-right: 12px;
+    color: $color-night-rider;
+  }
+
+  &__link {
+    display: flex;
+
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-night-rider;
+    transition: opacity $trans--300;
+
+    &--contact {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &--social {
+      font-size: 0;
+
+      .footer__link-icon {
+        margin: 0;
+      }
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+
+      &:hover,
+      &:focus {
+        color: $color-night-rider;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 16px;
+    border-top: 1px solid $color-light-gray;
+
+    p {
+      margin: 0;
+      text-align: center;
+      color: $color-night-rider;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

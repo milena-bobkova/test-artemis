@@ -1,0 +1,66 @@
+.form-search {
+  input {
+    padding: 0 0 0 20px;
+    border: none;
+    outline: none;
+    max-width: 120px;
+    border-bottom: 1px solid transparent;
+
+    transition: border-bottom $trans--300;
+
+    &:hover {
+      .form-search__icon {
+        color: $color-catalina-blue;
+      }
+    }
+
+    &:focus {
+      border-bottom: 1px solid $color-catalina-blue;
+    }
+
+    @include media-breakpoint-down(lg) {
+    }
+  }
+
+  label {
+    position: relative;
+
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
+      &:hover,
+      &:focus {
+        .form-search__icon {
+          color: $color-catalina-blue;
+        }
+      }
+    }
+
+  }
+
+  &__input-box {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding: 0;
+    cursor: pointer;
+    color: $color-night-rider;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color $trans--300;
+  }
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Artemis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Artemis">
+    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<linearGradient id="paint0_linear_1871:1611" x1="-91.2482" y1="274" x2="-91.2482" y2="619" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" offset="100%"/>
+<stop offset="1" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1871:1611" x1="69" y1="118" x2="69" y2="597" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" offset="100%"/>
+<stop offset="1" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+
+<linearGradient id="paint0_linear_1871:6879" x1="1.20553" y1="2.41105" x2="1.20553" y2="203" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" offset="100%"/>
+<stop offset="0.995724" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1871:6879" x1="744" y1="-60" x2="744" y2="363" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" offset="100%"/>
+<stop offset="1" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+<linearGradient id="paint2_linear_1871:6879" x1="795" y1="1" x2="795" y2="306" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" offset="100%"/>
+<stop offset="1" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+</defs><symbol id="arrow-dropdown" viewBox="0 0 8 5">
+<path d="M1 1L4 3.5L7 1" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="contacts-bg" viewBox="0 0 358 510">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 20C0 8.9543 8.9543 0 20 0H347C347 0 296 152 337 272C378 392 337 510 337 510H20C8.9543 510 0 501.046 0 490V20Z" fill="#2D415E"/>
+<mask id="mask0_1871:1611" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="356" height="510">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 20C0 8.9543 8.9543 0 20 0H347C347 0 296 152 337 272C378 392 337 510 337 510H20C8.9543 510 0 501.046 0 490V20Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_1871:1611)">
+<ellipse opacity="0.0312267" cx="81.4409" cy="446.5" rx="172.689" ry="172.5" fill="url(#paint0_linear_1871:1611)"/>
+<circle opacity="0.0312267" cx="308.5" cy="357.5" r="239.5" fill="url(#paint1_linear_1871:1611)"/>
+</g>
+
+</symbol><symbol id="facebook" viewBox="0 0 21 21">
+<path d="M11.4708 19.952C11.3928 19.9867 11.3145 20.0188 11.236 20.048C11.3145 20.0188 11.3928 19.9867 11.4708 19.952Z" fill="black"/>
+<path d="M11.4708 19.9732C11.3925 19.992 11.3143 20.0092 11.236 20.0268C11.3143 20.0092 11.3925 19.992 11.4708 19.9732Z" fill="black"/>
+<path d="M11.4708 19.9629C11.3929 19.991 11.3146 20.016 11.236 20.0371C11.3146 20.016 11.3929 19.991 11.4708 19.9629Z" fill="black"/>
+<path d="M11.4708 19.9775C11.3928 19.9936 11.3143 20.0084 11.236 20.0225C11.3143 20.0084 11.3928 19.9936 11.4708 19.9775Z" fill="black"/>
+<path d="M12.4033 19.9717C12.3688 19.9908 12.3341 20.01 12.2994 20.0283C12.3341 20.01 12.3688 19.9908 12.4033 19.9717Z" fill="black"/>
+<path d="M12.4014 18.9697C12.3681 18.9904 12.3348 19.01 12.3014 19.0303C12.3348 19.01 12.3681 18.9904 12.4014 18.9697Z" fill="black"/>
+<path d="M12.4014 19.9691C12.3682 19.9898 12.3348 20.0109 12.3014 20.0309C12.3348 20.0109 12.3682 19.9902 12.4014 19.9691Z" fill="black"/>
+<path d="M12.4014 19.9717C12.3683 19.9912 12.3349 20.0096 12.3014 20.0283C12.3349 20.0096 12.3683 19.9912 12.4014 19.9717Z" fill="black"/>
+<path d="M10.4729 19.9848C10.3947 19.9961 10.3165 20.0063 10.2381 20.0152C10.3165 20.0063 10.3947 19.9961 10.4729 19.9848Z" fill="black"/>
+<path d="M20.3347 10C20.3347 4.478 15.866 0 10.3555 0C4.84497 0 0.376282 4.478 0.376282 10C0.376282 15.522 4.84497 20 10.3555 20C10.4141 20 10.4724 19.9988 10.5309 19.9977V12.2131H8.38693V9.70932H10.5309V7.86682C10.5309 5.72998 11.8327 4.56696 13.7348 4.56696C14.6457 4.56696 15.4287 4.63501 15.6569 4.66537V6.89865H14.3453C13.3104 6.89865 13.1101 7.39151 13.1101 8.11462V9.70932H15.5845L15.2619 12.2131H13.1101V19.6136C17.2812 18.4154 20.3347 14.5645 20.3347 10Z" fill="#2D415E"/>
+<path d="M10.4729 19.9801C10.3949 19.9973 10.3166 20.0109 10.2381 20.0199C10.3166 20.0109 10.3949 19.9973 10.4729 19.9801Z" fill="black"/>
+<path d="M10.4729 19.9947C10.3948 19.9994 10.3164 20.0029 10.2381 20.0053C10.3164 20.0029 10.3948 19.9994 10.4729 19.9947Z" fill="black"/>
+</symbol><symbol id="features-bg" viewBox="0 0 1140 304">
+<rect width="1140" height="304" rx="20" fill="#2D415E"/>
+<mask id="mask0_1871:6879" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1140" height="304">
+<rect width="1140" height="304" rx="20" fill="white"/>
+</mask>
+<g mask="url(#mask0_1871:6879)">
+<rect opacity="0.0488514" width="203" height="203" rx="32" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 9.5 389.043)" fill="url(#paint0_linear_1871:6879)"/>
+<circle opacity="0.0909831" cx="955.5" cy="151.5" r="211.5" fill="url(#paint1_linear_1871:6879)"/>
+<circle opacity="0.0909831" cx="947.5" cy="153.5" r="152.5" fill="url(#paint2_linear_1871:6879)"/>
+</g>
+
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-mail" viewBox="0 0 12 9">
+<path d="M0.238713 0.659261C1.93891 1.6737 4.7408 3.65616 5.61764 4.21264C5.73535 4.28774 5.8616 4.32593 5.99267 4.32593C6.12346 4.32593 6.2495 4.2881 6.36694 4.21335C7.24453 3.65633 10.0179 1.6737 11.7182 0.659261C11.824 0.596224 12.0501 0.683183 11.9644 0.606117C11.7663 0.428035 11.4709 0.325928 11.1543 0.325928H0.831022C0.514476 0.325928 0.219076 0.428035 0.0209899 0.606134C-0.0647097 0.683183 0.132859 0.596224 0.238713 0.659261Z" fill="currentColor"/>
+<path d="M11.8385 1.32535C11.7501 1.28704 11.646 1.30041 11.5723 1.35892C9.74841 2.79689 7.32324 4.18994 6.59085 4.80371C6.17978 5.1488 5.80453 5.14926 5.39251 4.80371C4.61186 4.14957 1.89992 2.5325 0.411038 1.3589C0.336915 1.30039 0.232575 1.28748 0.144807 1.32533C0.0565699 1.36345 0 1.44553 0 1.53599V7.37498C0 7.8872 0.447855 8.30371 0.998621 8.30371H10.9848C11.5355 8.30371 11.9834 7.8872 11.9834 7.37498V1.53599C11.9834 1.44553 11.9268 1.36323 11.8385 1.32535Z" fill="currentColor"/>
+</symbol><symbol id="icon-phone" viewBox="0 0 11 11">
+<path d="M9.68275 7.28466C9.07136 7.28466 8.47105 7.19103 7.90218 7.00696C7.62343 6.91386 7.28075 6.99927 7.11062 7.17035L5.98779 8.00029C4.68561 7.31969 3.8835 6.53457 3.19789 5.26913L4.02058 4.19837C4.23431 3.98937 4.31098 3.68407 4.21913 3.39761C4.03033 2.83768 3.93442 2.25017 3.93442 1.65128C3.93444 1.21864 3.57497 0.866665 3.13314 0.866665H1.29923C0.857399 0.866665 0.497925 1.21864 0.497925 1.65126C0.497925 6.61017 4.61818 10.6444 9.68275 10.6444C10.1246 10.6444 10.4841 10.2925 10.4841 9.85985V8.06922C10.484 7.63663 10.1246 7.28466 9.68275 7.28466Z" fill="currentColor"/>
+</symbol><symbol id="icon-search" viewBox="0 0 16 15">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.0868 9.66729L15.4442 14.0247C15.5663 14.1467 15.5663 14.3446 15.4443 14.4666L15.0024 14.9085C14.8803 15.0305 14.6825 15.0305 14.5605 14.9085L10.2031 10.5511C9.18273 11.3775 7.88558 11.875 6.47329 11.875C3.19936 11.875 0.535767 9.21146 0.535767 5.93752C0.535767 2.66359 3.19933 0 6.47326 0C9.7472 0 12.4108 2.66359 12.4108 5.93752C12.4108 7.34981 11.9133 8.64696 11.0868 9.66729ZM1.78578 5.93752C1.78578 8.52236 3.88845 10.625 6.47329 10.625C9.05813 10.625 11.1608 8.52236 11.1608 5.93752C11.1608 3.35268 9.05813 1.25001 6.47329 1.25001C3.88845 1.25001 1.78578 3.35268 1.78578 5.93752Z" fill="currentColor"/>
+</symbol><symbol id="instagram" viewBox="0 0 21 20">
+<path d="M12.79 10C12.79 11.1046 11.8964 12 10.7942 12C9.69186 12 8.79831 11.1046 8.79831 10C8.79831 8.89541 9.69186 8 10.7942 8C11.8964 8 12.79 8.89541 12.79 10Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5387 6.40301C15.4412 6.13819 15.2856 5.8985 15.0835 5.70175C14.8871 5.49917 14.6481 5.34326 14.3836 5.24553C14.1692 5.16207 13.847 5.06272 13.2536 5.03565C12.6117 5.00632 12.4193 5 10.7942 5C9.169 5 8.97654 5.00616 8.3348 5.03549C7.74141 5.06272 7.41908 5.16207 7.20479 5.24553C6.94036 5.34326 6.70116 5.49917 6.50499 5.70175C6.30282 5.8985 6.14724 6.13803 6.04956 6.40301C5.96626 6.61791 5.86712 6.94091 5.84012 7.53553C5.81084 8.17861 5.80453 8.37147 5.80453 10.0001C5.80453 11.6285 5.81084 11.8214 5.84012 12.4646C5.86712 13.0593 5.96626 13.3821 6.04956 13.597C6.14724 13.862 6.30266 14.1015 6.50482 14.2983C6.70116 14.5008 6.9402 14.6567 7.20463 14.7545C7.41908 14.8381 7.74141 14.9374 8.3348 14.9645C8.97654 14.9938 9.16884 15 10.7941 15C12.4194 15 12.6119 14.9938 13.2535 14.9645C13.8469 14.9374 14.1692 14.8381 14.3836 14.7545C14.9144 14.5493 15.334 14.1289 15.5387 13.597C15.622 13.3821 15.7212 13.0593 15.7483 12.4646C15.7776 11.8214 15.7837 11.6285 15.7837 10.0001C15.7837 8.37147 15.7776 8.17861 15.7483 7.53553C15.7213 6.94091 15.6222 6.61791 15.5387 6.40301ZM10.7942 13C9.14075 13 7.80038 11.657 7.80038 10C7.80038 8.34304 9.14075 7 10.7942 7C12.4475 7 13.7879 8.34304 13.7879 10C13.7879 11.657 12.4475 13 10.7942 13ZM12.79 6.5C12.79 6.77613 13.0134 7 13.2889 7C13.5645 7 13.7878 6.77613 13.7879 6.5C13.7879 6.22387 13.5645 6 13.2889 6C13.0134 6 12.79 6.22387 12.79 6.5Z" fill="#2D415E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.814941 10C0.814941 4.478 5.28363 0 10.7941 0C16.3047 0 20.7734 4.478 20.7734 10C20.7734 15.522 16.3047 20 10.7941 20C5.28363 20 0.814941 15.522 0.814941 10ZM16.2235 13.7613C16.3651 13.396 16.4621 12.9787 16.4898 12.3674C16.5178 11.7551 16.5244 11.5594 16.5244 10C16.5244 8.44055 16.5178 8.24493 16.49 7.6326C16.4621 7.02133 16.3653 6.604 16.2235 6.23871C16.0798 5.85556 15.8541 5.50858 15.5627 5.22171C15.2764 4.9295 14.93 4.70337 14.5476 4.55917C14.1831 4.41742 13.7666 4.32037 13.1566 4.2926C12.5456 4.26453 12.3504 4.25781 10.7941 4.25781C9.23794 4.25781 9.04273 4.26453 8.43167 4.29245C7.82167 4.32037 7.40521 4.41742 7.04068 4.55933C6.65833 4.70352 6.31191 4.9295 6.02579 5.22171C5.7342 5.50842 5.50853 5.85556 5.36463 6.23871C5.22302 6.604 5.12618 7.02133 5.09847 7.6326C5.07045 8.24493 5.0639 8.44055 5.0639 10C5.0639 11.5594 5.07045 11.7551 5.09862 12.3676C5.12633 12.9787 5.22333 13.3961 5.36494 13.7613C5.50883 14.1444 5.73435 14.4916 6.02579 14.7783C6.31206 15.0705 6.65833 15.2965 7.04083 15.4407C7.40521 15.5826 7.82183 15.6796 8.43167 15.7076C9.04288 15.7355 9.23794 15.7422 10.7943 15.7422C12.3505 15.7422 12.5457 15.7355 13.1568 15.7076C13.7666 15.6796 14.1832 15.5826 14.5476 15.4407C15.3173 15.1424 15.9258 14.5326 16.2235 13.7613Z" fill="#2D415E"/>
+</symbol><symbol id="linkedin" viewBox="0 0 21 20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.937622 10C0.937622 4.478 5.40631 0 10.9168 0C16.4273 0 20.896 4.478 20.896 10C20.896 15.522 16.4273 20 10.9168 20C5.40631 20 0.937622 15.522 0.937622 10ZM5.5866 15.1172H8.01699V7.79007H5.5866V15.1172ZM6.80187 6.78955H6.78603C5.97047 6.78955 5.443 6.22696 5.443 5.52383C5.443 4.80484 5.98661 4.25781 6.81801 4.25781C7.64941 4.25781 8.16103 4.80484 8.17687 5.52383C8.17687 6.22696 7.64941 6.78955 6.80187 6.78955ZM14.3504 15.1172H16.7805V10.9158C16.7805 8.66531 15.5815 7.6181 13.9825 7.6181C12.6931 7.6181 12.1152 8.32825 11.7922 8.82751V7.79007H9.36199C9.39382 8.47748 9.36199 15.1172 9.36199 15.1172H11.7922V11.0254C11.7922 10.8064 11.8079 10.5876 11.8722 10.4311C12.0479 9.99359 12.4478 9.54041 13.1191 9.54041C13.9985 9.54041 14.3504 10.2122 14.3504 11.1974V15.1172Z" fill="#2D415E"/>
+</symbol><symbol id="play-button" viewBox="0 0 60 60">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 30C0 13.458 13.458 0 30 0C46.542 0 60 13.458 60 30C60 46.542 46.542 60 30 60C13.458 60 0 46.542 0 30ZM23.563 45.826L45.563 30.826C45.836 30.64 46 30.331 46 30C46 29.669 45.836 29.36 45.564 29.174L23.564 14.174C23.257 13.966 22.861 13.942 22.533 14.116C22.205 14.289 22 14.629 22 15V45C22 45.371 22.205 45.711 22.533 45.884C22.679 45.962 22.84 46 23 46C23.197 46 23.394 45.941 23.563 45.826Z" fill="currentColor"/>
+</symbol><symbol id="youtube" viewBox="0 0 21 20">
+<path d="M9.38046 12L12.3742 10L9.38046 8L9.38046 12Z" fill="#2D415E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.39917 10C0.39917 4.478 4.86785 0 10.3784 0C15.8889 0 20.3576 4.478 20.3576 10C20.3576 15.522 15.8889 20 10.3784 20C4.86785 20 0.39917 15.522 0.39917 10ZM16.3571 13.0162C16.6139 12.0383 16.6139 10.0102 16.6139 10.0102C16.6139 10.0102 16.6242 7.97211 16.3571 6.99417C16.2132 6.45889 15.7921 6.03668 15.2579 5.89264C14.282 5.625 10.3784 5.625 10.3784 5.625C10.3784 5.625 6.47477 5.625 5.49886 5.88242C4.9749 6.02646 4.54337 6.45889 4.39962 6.99417C4.14274 7.97211 4.14274 10 4.14274 10C4.14274 10 4.14274 12.0383 4.39962 13.0058C4.54352 13.5411 4.9647 13.9633 5.49886 14.1074C6.48497 14.375 10.3784 14.375 10.3784 14.375C10.3784 14.375 14.282 14.375 15.2579 14.1176C15.7921 13.9735 16.2132 13.5515 16.3571 13.0162Z" fill="#2D415E"/>
+</symbol></svg>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="container"><a class="header__logo">
+              <picture>
+                <source type="image/webp" srcset="img/content/logo.webp, img/content/logo@2x.webp 2x"><img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="143" height="30" alt="logo">
+              </picture></a>
+            <button class="header__toggle btn-reset" type="button" aria-label="Mobile menu" aria-pressed="false"><span></span></button>
+            <nav class="main-nav">
+              <div class="main-nav__wrapper">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item submenu" data-submenu><a class="main-nav__link submenu__toggle" href="#" data-toggle>Services
+                      <div class="submenu__link-icon">
+                        <svg width="8" height="5" aria-hidden="true">
+                          <use xlink:href="#arrow-dropdown"></use>
+                        </svg>
+                      </div></a>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="#funding" data-scroll>Outcome-based funding</a>
+                      </li>
+                      <li class="submenu__item"><a class="submenu__link" href="#services" data-scroll>Advisory services </a>
+                      </li>
+                      <li class="submenu__item"><a class="submenu__link" href="#news" data-scroll>Outcome measurement application</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">About Us</a>
+                  </li>
+                  <li class="main-nav__item submenu" data-submenu><a class="main-nav__link submenu__toggle" href="#" data-toggle>Blog
+                      <div class="submenu__link-icon">
+                        <svg width="8" height="5" aria-hidden="true">
+                          <use xlink:href="#arrow-dropdown"></use>
+                        </svg>
+                      </div></a>
+                    <ul class="submenu__list">
+                      <li class="submenu__item"><a class="submenu__link" href="#article" data-scroll>Article</a>
+                      </li>
+                      <li class="submenu__item"><a class="submenu__link" href="#article" data-scroll>Article</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#contact" data-scroll>Contact Us</a>
+                  </li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Podcast</a>
+                  </li>
+                </ul>
+                <div class="user-block">
+                  <div class="lang submenu" data-submenu><a href="#" data-toggle>English
+                      <div class="lang__icon">
+                        <svg width="8" height="5" aria-hidden="true">
+                          <use xlink:href="#arrow-dropdown"></use>
+                        </svg>
+                      </div></a>
+                    <ul class="lang__list submenu__list">
+                      <li class="lang__item submenu__item"><a class="lang__link lang__link--en submenu__link">English</a></li>
+                      <li class="lang__item submenu__item"><a class="lang__link lang__link--fr submenu__link">France</a></li>
+                    </ul>
+                  </div>
+                  <form class="form-search" action="#" method="post">
+                    <div class="form-search__input-box">
+                      <label>
+                        <input type="search" name="search" id="search-header"><span class="form-search__icon">
+                          <svg width="16" height="15" aria-hidden="true">
+                            <use xlink:href="#icon-search"></use>
+                          </svg></span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="text-section page-intro">
+          <div class="container">
+            <div class="page-intro__img text-section__img">
+              <picture>
+                <source type="image/webp" srcset="img/content/intro-picture.webp, img/content/intro-picture@2x.webp 2x"><img src="img/content/intro-picture.png" srcset="img/content/intro-picture@2x.png 2x" width="972" height="675" alt="intro picture">
+              </picture>
+            </div>
+            <div class="page-intro__text-content text-section__text-content">
+              <h1 class="h1">Creating Positive Impact with Artemis</h1>
+              <p>We all live inside an interconnected network in need of positive, socially connected changes that achieve measurable results. Artemis was founded to create these positive connections, and achieve these results with our impact-driven focus!</p>
+              <div class="page-intro__buttons">
+                <button class="button button--primary" type="button" aria-label="Download App">Download App</button>
+                <button class="button button--secondary" type="button" aria-label="Get in touch">Get in touch</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="features" id="article">
+          <h2 class="visually-hidden">Features</h2>
+          <div class="container">
+            <div class="features__bg">
+              <svg width="1140" height="304" aria-hidden="true">
+                <use xlink:href="#features-bg"></use>
+              </svg>
+            </div>
+            <ul class="features__list">
+              <li class="features__item"><span class="features__term">Projects</span><span class="features__def">14</span></li>
+              <li class="features__item"><span class="features__term">Money donated</span><span class="features__def">$150k</span></li>
+              <li class="features__item"><span class="features__term">Beneficiaries supported</span><span class="features__def">3000+</span></li>
+            </ul>
+            <div class="features__img"><img src="img/content/features-picture.svg" srcset="img/content/features-picture@2x.svg 2x" width="406" height="355" alt="features picture">
+            </div>
+          </div>
+        </section>
+        <section class="slogan">
+          <div class="container">
+            <h2 class="h2">We are here to help you!</h2>
+          </div>
+        </section>
+        <section class="text-section funding" id="funding">
+          <div class="container">
+            <div class="funding__text-content text-section__text-content">
+              <h2 class="h2">Outcome-based Funding</h2>
+              <p>For our individual or institutional donors and NGO receiver teams, our Artemis services can provide the focused precision in locating, connecting, and enabling the most specific projects for your funds, along with the most transparent and measurable, data-driven results for you & your stakeholders. We cater to projects in all stages: Pre-funding, Already funded.</p><a class="button button--primary" href="#contact" aria-label="cottact us" data-scroll>Contact Us</a>
+            </div>
+            <div class="funding__img text-section__img"><img src="img/content/funding-picture.svg" srcset="img/content/funding-picture@2x.svg 2x" width="702" height="502" alt="funding picture">
+            </div>
+          </div>
+        </section>
+        <section class="text-section services" id="services">
+          <div class="container">
+            <div class="services__img text-section__img"><img src="img/content/services-picture.svg" srcset="img/content/services-picture@2x.svg 2x" width="700" height="448" alt="services picture">
+            </div>
+            <div class="services__text-content text-section__text-content">
+              <h2 class="h2">Advisory Services</h2>
+              <p>The need for having a CSR program, which creates value is an absolute necessity in the corporate & private sector spheres. Helping you define projects aligned with your core business, providing a more purpose-driven momentum, achieve the targeted results required to create a sustainable impact supported with transparent, data-driven reports is always the Artemis priority.</p><a class="button button--primary" href="#contact" aria-label="cottact us" data-scroll>Contact Us</a>
+            </div>
+          </div>
+        </section>
+        <section class="news" id="news">
+          <div class="container">
+            <h2 class="h2">What’s New?</h2>
+            <div class="slider" data-slider>
+              <div class="slider-nav">
+                <button class="slider-nav__btn slider-nav__btn--prev button button--round swiper-button-prev">
+                  <svg width="17" height="10" aria-hidden="true">
+                    <use xlink:href="#arrow-dropdown"></use>
+                  </svg>
+                </button>
+                <button class="slider-nav__btn slider-nav__btn--next button button--round swiper-button-next">
+                  <svg width="17" height="10" aria-hidden="true">
+                    <use xlink:href="#arrow-dropdown"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="slider__container swiper mySwiper">
+                <ul class="slider__slides swiper-wrapper">
+                  <li class="slider__slide swiper-slide">
+                    <div class="media-card">
+                      <div class="media-card__video">
+                        <!--<iframe data-lazy-onload="#" width="" height="" title="vimeo-player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/video-1.webp, img/slides/video-1@2x.webp 2x"><img src="img/slides/video-1.jpg" srcset="img/slides/video-1@2x.jpg 2x" width="310" height="273" alt="Merdeka Belajar &amp; Sekolah Alternatif - Artemis Impact Podcast #5">
+                        </picture><a class="media-card__play-btn play-btn" aria-label="look video" href="#">
+                          <svg width="60" height="60" aria-hidden="true">
+                            <use xlink:href="#play-button"></use>
+                          </svg></a>
+                      </div><a class="media-card__title" href="#">Merdeka Belajar & Sekolah Alternatif - Artemis Impact Podcast #5</a>
+                    </div>
+                  </li>
+                  <li class="slider__slide swiper-slide">
+                    <div class="media-card">
+                      <div class="media-card__video">
+                        <!--<iframe data-lazy-onload="#" width="" height="" title="vimeo-player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/video-2.webp, img/slides/video-2@2x.webp 2x"><img src="img/slides/video-2.jpg" srcset="img/slides/video-2@2x.jpg 2x" width="310" height="273" alt="We Are Watching You - Artemis Impact Podcast #4">
+                        </picture><a class="media-card__play-btn play-btn" aria-label="look video" href="#">
+                          <svg width="60" height="60" aria-hidden="true">
+                            <use xlink:href="#play-button"></use>
+                          </svg></a>
+                      </div><a class="media-card__title" href="#">We Are Watching You - Artemis Impact Podcast #4</a>
+                    </div>
+                  </li>
+                  <li class="slider__slide swiper-slide">
+                    <div class="media-card">
+                      <div class="media-card__video">
+                        <!--<iframe data-lazy-onload="#" width="" height="" title="vimeo-player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
+                        <picture>
+                          <source type="image/webp" srcset="img/slides/video-3.webp, img/slides/video-3@2x.webp 2x"><img src="img/slides/video-3.jpg" srcset="img/slides/video-3@2x.jpg 2x" width="310" height="273" alt="NGO dan Komunitas Lingkungan di Indonesia - Artemis Impact Podcast #3">
+                        </picture><a class="media-card__play-btn play-btn" aria-label="look video" href="#">
+                          <svg width="60" height="60" aria-hidden="true">
+                            <use xlink:href="#play-button"></use>
+                          </svg></a>
+                      </div><a class="media-card__title" href="#">NGO dan Komunitas Lingkungan&nbsp;di&nbsp;Indonesia - Artemis Impact Podcast #3</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="feedback" id="contact">
+          <div class="container">
+            <h2 class="h2">Start your Social Impact Journey Today</h2>
+            <div class="feedback__wrapper">
+              <div class="feedback__bg">
+                <svg width="358" height="510" aria-hidden="true">
+                  <use xlink:href="#contacts-bg"></use>
+                </svg>
+              </div>
+              <div class="feedback__contacts">
+                <div class="feedback__contacts-block">
+                  <h3 class="h3">General Inquiries</h3>
+                  <div class="feedback__contacts-list"><a class="feedback__link" href="tel:+6285894442405">
+                      <div class="feedback__contacts__icon">
+                        <svg width="11" height="11" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div><span>+62&#8209;858&#8209;9444&#8209;2405</span></a><a class="feedback__link" href="mailto:contact@artemis.im">
+                      <div class="feedback__contacts__icon">
+                        <svg width="12" height="9" aria-hidden="true">
+                          <use xlink:href="#icon-mail"></use>
+                        </svg>
+                      </div><span>contact@artemis.im</span></a><a class="feedback__link feedback__link--noicon" href="mailto:simon@artemis.im"><span>simon@artemis.im</span></a></div>
+                </div>
+                <div class="feedback__contacts-block">
+                  <h3 class="h3">Media & Press</h3>
+                  <div class="feedback__contacts-list"><a class="feedback__link feedback__link" href="tel:+6281283374974">
+                      <div class="feedback__contacts__icon">
+                        <svg width="11" height="11" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div><span>+62&#8209;812&#8209;8337&#8209;4974</span></a><a class="feedback__link" href="mailto:contact@artemis.im ">
+                      <div class="feedback__contacts__icon">
+                        <svg width="12" height="9" aria-hidden="true">
+                          <use xlink:href="#icon-mail"></use>
+                        </svg>
+                      </div><span>contact@artemis.im</span></a></div>
+                </div>
+              </div>
+              <div class="feedback__form">
+                <h3 class="h3 h3--color">Get in touch</h3>
+                <form action="#" method="post" data-validate>
+                  <div class="feedback__input-box">
+                    <input type="text" name="name" id="feedback-name" placeholder="Name">
+                    <label for="feedback-name"></label>
+                  </div>
+                  <div class="feedback__input-box">
+                    <input type="email" name="email" id="feedback-email" placeholder="Email">
+                    <label for="feedback-name"></label>
+                  </div>
+                  <div class="feedback__textarea-box">
+                    <textarea name="text" id="feedback-text" rows="1" placeholder="Message"></textarea>
+                    <label for="feedback-text"></label>
+                  </div>
+                  <button class="button button--primary" type="submit" aria-label="Form submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="footer__logo">
+              <picture>
+                <source type="image/webp" srcset="img/content/logo.webp, img/content/logo@2x.webp 2x"><img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="143" height="30" alt="logo">
+              </picture>
+            </div>
+            <ul class="footer__site-map">
+              <li class="footer__site-map-block">
+                <h2>Company</h2>
+                <ul class="footer__links">
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>About Us</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>Contact Us</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>Blog</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>Vlog</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>Podcast</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>Case studies</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__site-map-block">
+                <h2>Services</h2>
+                <ul class="footer__links">
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>Outcome-based funding</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>Advisory services </span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link" href="#"><span>Outcome measurement application</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__site-map-block">
+                <h2>Contact</h2>
+                <ul class="footer__links">
+                  <li class="footer__links-item"><a class="footer__link footer__link--contact" href="tel:+6285894442405">
+                      <div class="footer__link-icon">
+                        <svg width="11" height="11" aria-hidden="true">
+                          <use xlink:href="#icon-phone"></use>
+                        </svg>
+                      </div><span>+62&#8209;858&#8209;9444&#8209;2405</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link footer__link--contact" href="mailto:contact@artemis.im ">
+                      <div class="footer__link-icon">
+                        <svg width="12" height="9" aria-hidden="true">
+                          <use xlink:href="#icon-mail"></use>
+                        </svg>
+                      </div><span>contact@artemis.im </span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__site-map-block footer__site-map-block--socials">
+                <h2>Follow Us</h2>
+                <ul class="footer__links">
+                  <li class="footer__links-item"><a class="footer__link footer__link--social" href="#" target="_blank" rel="nofollow noopener">
+                      <div class="footer__link-icon">
+                        <svg width="21" height="20" aria-hidden="true">
+                          <use xlink:href="#youtube"></use>
+                        </svg>
+                      </div><span>youtube</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link footer__link--social" href="#" target="_blank" rel="nofollow noopener">
+                      <div class="footer__link-icon">
+                        <svg width="21" height="20" aria-hidden="true">
+                          <use xlink:href="#linkedin"></use>
+                        </svg>
+                      </div><span>linkedin</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link footer__link--social" href="#" target="_blank" rel="nofollow noopener">
+                      <div class="footer__link-icon">
+                        <svg width="21" height="21" aria-hidden="true">
+                          <use xlink:href="#facebook"></use>
+                        </svg>
+                      </div><span>facebook</span></a>
+                  </li>
+                  <li class="footer__links-item"><a class="footer__link footer__link--social" href="#" target="_blank" rel="nofollow noopener">
+                      <div class="footer__link-icon">
+                        <svg width="21" height="20" aria-hidden="true">
+                          <use xlink:href="#instagram"></use>
+                        </svg>
+                      </div><span>instagram</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <p>All rights reserved (c) Artemis 2020</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

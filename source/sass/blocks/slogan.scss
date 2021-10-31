@@ -1,0 +1,37 @@
+.slogan {
+  margin-bottom: 75px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  h2 {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: -25px;
+      right: -295px;
+      content: "";
+      width: 72px;
+      height: 72px;
+      background: url("../img/svg/circle.svg");
+      background-size: 100%;
+
+      @include media-breakpoint-down(xl) {
+        right: -200px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        right: -100px;
+      }
+
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+}
