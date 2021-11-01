@@ -20,7 +20,7 @@ block main
           .page-intro__buttons
             +button({type: "button", text: "Download App", label: "Download App"}).button--primary
             +button({type: "button", text: "Get in touch", label: "Get in touch"}).button--secondary
-    section.features(id="article")
+    section.features(id="features")
       h2.visually-hidden Features
       .container
         .features__bg
@@ -36,7 +36,7 @@ block main
             span.features__term Beneficiaries supported
             span.features__def 3000+
         .features__img
-          +img("content", "features-picture", "svg", 406, 355, "features picture")
+          img(src="img/content/features-picture.svg" width=406, height=355, alt="features picture")
     section.slogan
       .container
         h2.h2 We are here to help you!
@@ -47,11 +47,11 @@ block main
           p For our individual or institutional donors and NGO receiver teams, our Artemis services can provide the focused precision in locating, connecting, and enabling the most specific projects for your funds, along with the most transparent and measurable, data-driven results for you & your stakeholders. We cater to projects in all stages: Pre-funding, Already funded.
           a(href="#contact" aria-label="cottact us" data-scroll).button.button--primary Contact Us
         .funding__img.text-section__img
-          +img("content", "funding-picture", "svg", 702, 502, "funding picture")
+          img(src="img/content/funding-picture.svg" width=702, height=502, alt="funding picture")
     section.text-section.services(id="services")
       .container
         .services__img.text-section__img
-          +img("content", "services-picture", "svg", 700, 448, "services picture")
+          img(src="img/content/services-picture.svg" width=700, height=448, alt="services picture")
         .services__text-content.text-section__text-content
           h2.h2 Advisory Services
           p The need for having a CSR program, which creates value is an absolute necessity in the corporate & private sector spheres. Helping you define projects aligned with your core business, providing a more purpose-driven momentum, achieve the targeted results required to create a sustainable impact supported with transparent, data-driven reports is always the Artemis priority.
